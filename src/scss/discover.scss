@@ -1,0 +1,220 @@
+@import "colors";
+
+#discover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    overflow: hidden;
+
+    #discover-heading {
+        color: $black;
+        width: 64%;
+        margin-top: 5vh;
+
+        font-weight: bold;
+
+        #out {
+            color: $highlighter;
+        }
+        #new-features {
+            color: white;
+            background-color: $black;
+        }
+    }
+
+    #discover-img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    }
+
+    .discover-products {
+        display: grid;
+        grid-template-rows: 0% 50% 0% 50%;
+        align-items: center;
+        width: 100%;
+        .line-before {
+            height: 80%;
+            width: 100%;
+            background-color: $black;
+        }
+        .line-after {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(196, 196, 196);
+        }
+    }
+
+    .features {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 85% 15%;
+
+        .left {
+            width: inherit;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10%;
+
+            h2::after {
+                content: "";
+                background-color: $black;
+                display: block;
+                margin-top: 2%;
+                height: 5px;
+                width: 85%;
+            }
+
+            p {
+                width: 90%;
+                padding: 10% 0;
+            }
+
+            a {
+                color: $black;
+                text-decoration: none;
+            }
+        }
+
+        .right {
+            width: inherit;
+            display: grid;
+            grid-template-rows: 25% 25% 25% 25%;
+
+            button {
+                border-style: none;
+                border-left: 3px solid $black;
+                background-color: $white;
+                text-align: left;
+                img {
+                    min-width: 50%;
+                }
+            }
+            button:hover {
+                background-color: #ea6c41;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+    margin-top: 2%;
+
+    p {
+        font-weight: bold;
+        padding: 10%;
+        color: $highlighter;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .image-left,
+    .image-right {
+        padding: 2% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image-right {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #discover {
+        text-align: center;
+    }
+
+    #discover-heading {
+        font-size: 2rem;
+        span {
+            font-size: inherit;
+        }
+        #new-features {
+            padding: 0 10px;
+        }
+    }
+
+    .discover-products {
+        margin-top: 2%;
+        height: 60vh;
+        grid: 100%/ 5% 45% 3% 47% !important;
+        width: 100%;
+    }
+
+    .line-before {
+        background-color: $black !important;
+    }
+
+    .line-after {
+        width: 3px !important;
+        height: 100%;
+        background-color: #999999 !important;
+    }
+
+    .right {
+        height: 80%;
+        margin: auto;
+    }
+
+    .left {
+        padding: 0 20%;
+        text-align: left;
+    }
+
+    #discover-img {
+        img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    }
+
+    .image-container {
+        background-color: $black;
+        flex-direction: row-reverse !important;
+        p {
+            font-size: 1.4rem !important;
+        }
+
+        margin-top: 6%;
+        padding-bottom: 5%;
+        .image-left p {
+            color: $white;
+        }
+        img {
+            max-height: 70%;
+            max-width: 70%;
+        }
+
+        flex-direction: row;
+        .image-left,
+        .image-right {
+            padding: 0 1%;
+        }
+        .image-right {
+            flex-direction: column;
+        }
+    }
+}

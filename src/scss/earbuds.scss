@@ -1,0 +1,109 @@
+@import "colors";
+
+.earbuds {
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+
+    .char {
+        color: $black;
+        font-size: 1.4rem;
+        margin-top: 5vh;
+        font-weight: bold;
+    }
+
+    img {
+        height: 35vh;
+    }
+
+    .earbuds-infor {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5% 0;
+
+        h2 {
+            width: 75%;
+            text-align: center;
+        }
+
+        h2::after {
+            content: "";
+            background-color: $highlighter;
+            display: block;
+            height: 5px;
+            width: 75%;
+        }
+    }
+
+    .earbuds-infor > div {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        background-color: #ffffff;
+        margin: auto;
+        margin-top: 6%;
+        border-radius: 12px;
+        box-shadow: 3px 4px 12px rgba(107, 107, 107, 0.575);
+        transition: width 2s;
+    }
+
+    .earbuds-infor > div:hover {
+        background-color: rgb(243, 243, 243);
+    }
+
+    #earbuds-content-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+        width: 80%;
+        height: 48vh;
+
+        .buy {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4em;
+            font-weight: bold;
+
+            p {
+                color: $highlighter;
+            }
+
+            button {
+                background-color: $black;
+                height: 6vh;
+                color: white;
+                border-style: none;
+                font-weight: bold;
+            }
+            button:hover {
+                background-color: $highlighter;
+            }
+        }
+    }
+}
+@media screen and (min-width: 800px) {
+    .earbuds {
+        .earbuds-infor > div {
+            max-width: 35%;
+        }
+
+        h2 {
+            color: $black;
+            font-size: 2rem;
+            margin-top: 5vh;
+            font-weight: bold;
+        }
+    }
+}

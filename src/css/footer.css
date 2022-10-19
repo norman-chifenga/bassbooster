@@ -1,0 +1,99 @@
+.delivery {
+  width: 100%;
+  height: 8vh;
+  background-color: rgb(220, 216, 216);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.delivery p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+footer {
+  width: 100%;
+  background-color: #1e1f24;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 5vh;
+}
+footer .footer-top {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  padding: 0 5%;
+}
+footer #footer-logo {
+  width: 30vw;
+}
+footer .back-to-top {
+  color: rgb(220, 216, 216);
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  text-decoration: none;
+  height: 100%;
+  padding-top: 3vh;
+}
+footer #bot-social-media {
+  margin: auto;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2% 0%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer #bot-social-media img {
+  max-width: 40px;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+footer #bot-social-media img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+footer p {
+  color: white;
+  text-align: center;
+  padding: 4vh 0;
+}
+
+@media screen and (min-width: 600px) {
+  footer #footer-logo {
+    max-width: 25vw;
+  }
+  footer #bot-social-media {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer #footer-logo {
+    max-width: 15vw;
+  }
+  footer #bot-social-media {
+    width: 300px;
+  }
+}

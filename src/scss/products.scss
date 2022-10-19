@@ -1,0 +1,155 @@
+@import "colors";
+
+.products {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: $black;
+    width: 100%;
+    box-shadow: 3px 4px 15px rgba(107, 107, 107, 0.575);
+    -webkit-margin-collapse: collapse;
+    margin: 3% 0;
+
+    //side buttons
+    button {
+        text-align: center;
+        border-style: none;
+        background-color: transparent;
+        width: 10%;
+        height: 100%;
+
+        img {
+            max-width: 50%;
+        }
+    }
+    button:hover {
+        cursor: pointer;
+    }
+
+    #product-prev {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .product-infor {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fcfcfc;
+
+        //the div start with an image before product information
+        .product-image {
+            width: 100%;
+            height: 50%;
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+
+        #product-content-info {
+            height: 50%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            justify-content: space-around;
+
+            h2 {
+                width: 100%;
+            }
+
+            h2::after {
+                content: "";
+                background-color: $highlighter;
+                display: block;
+                height: 10%;
+                width: 50%;
+                margin: 2% 0;
+            }
+
+            #dots-containers {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 40% !important;
+                height: 5%;
+
+                .dots {
+                    height: 100% !important;
+                    width: 10% !important;
+                    background-color: red;
+                    border-radius: 50%;
+                }
+                .d1 {
+                    background-color: $grey;
+                }
+                .d2 {
+                    background-color: $highlighter;
+                }
+                .d3 {
+                    background-color: $white;
+                }
+                .d4 {
+                    background-color: rgb(219, 41, 41) (247, 23, 23) (252, 6, 6);
+                }
+            }
+
+            .buy {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                width: 100%;
+
+                p {
+                    color: $highlighter;
+                    text-align: center;
+                }
+
+                button {
+                    background-color: $white;
+                    height: 6vh;
+                    font-weight: bold;
+                    border-style: none;
+                    width: 100%;
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+
+            #sign {
+                color: rgb(80, 80, 80);
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .products {
+        .product-infor {
+            flex-direction: row-reverse;
+
+            #product-content-info {
+                padding: 0 10%;
+            }
+        }
+    }
+    // the horizontal line
+    .line-after-image {
+        background-color: #bebebe;
+        min-width: 4px;
+        min-height: 50%;
+        display: none;
+    }
+}
